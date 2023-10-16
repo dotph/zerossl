@@ -39,11 +39,15 @@ module ZeroSSL
     end
 
     def cancel(id)
-      @http.post("/certificates/#{id}/cancel")&.body
+      @http.post("certificates/#{id}/cancel")&.body
     end
 
     def revoke(id)
-      @http.post("/certificates/#{id}/revoke")&.body
+      @http.post("certificates/#{id}/revoke")&.body
+    end
+
+    def certificate(id)
+      @http.get("certificates/#{id}")
     end
 
   end
