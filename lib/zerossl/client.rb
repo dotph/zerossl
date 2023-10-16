@@ -38,5 +38,13 @@ module ZeroSSL
       @http.get("certificates/#{id}/download/return")&.body
     end
 
+    def cancel(id)
+      @http.get("/certificates/#{id}/cancel")&.body
+    end
+
+    def revoke(id)
+      @http.post("/certificates/#{id}/revoke")&.body
+    end
+
   end
 end
