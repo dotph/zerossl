@@ -79,6 +79,15 @@ client.download(certificate_id)
 #    "certificate.crt": "---BEGIN CERTIFICATE---{primary_certificate}---END CERTIFICATE---",
 #    "ca_bundle.crt": "---BEGIN CERTIFICATE---{certificate_bundle}---END CERTIFICATE---"
 # }
+
+# Revoke Certificate
+client.revoke(certificate_id)
+#=> true
+
+# Cancel Pending Certificate
+client.cancel(certificate_id)
+#=> true
+
 ```
 
 ## Development
